@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         try {
-            // Replace with your Render backend URL
-            const response = await fetch("https://your-backend-service.onrender.com/api/calculate_macros", {
+            // Replace with your actual backend URL
+            const response = await fetch("https://iron-fuel-api.onrender.com/api/calculate_macros", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

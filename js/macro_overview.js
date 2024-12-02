@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        // Replace with your Render backend URL
-        const response = await fetch("https://your-backend-service.onrender.com/api/get_macros");
+        // Replace with your actual backend URL for fetching macros
+        const response = await fetch("https://iron-fuel-api.onrender.com/api/get_macros");
 
         if (response.ok) {
             const macros = await response.json();
