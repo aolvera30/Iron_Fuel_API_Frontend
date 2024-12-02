@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         try {
-            // Replace with your actual backend URL
+            // POST request to the backend to calculate macros
             const response = await fetch("https://iron-fuel-api.onrender.com/api/calculate_macros", {
                 method: "POST",
                 headers: {
@@ -22,12 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (response.ok) {
-                // Redirect to the macro overview page or display results
+                // Redirect to the macro overview page after successful response
                 const result = await response.json();
                 console.log("Success:", result);
                 window.location.href = "./macro_overview.html"; // Redirect to results page
             } else {
-                // Handle errors
                 const error = await response.json();
                 alert(error.message || "Something went wrong. Please try again.");
             }
